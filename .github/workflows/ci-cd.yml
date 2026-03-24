@@ -2,9 +2,9 @@ name: CI/CD Pipeline for Dublin Marketplace
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "main", "dev" ]
   pull_request:
-    branches: [ main ]
+    branches: [ "main", "dev" ]
   workflow_dispatch:  # Allows manual trigger from GitHub UI
 
 env:
