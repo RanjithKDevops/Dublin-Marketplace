@@ -55,10 +55,18 @@ jobs:
         bandit -r . -f txt -o bandit-report.txt || true
         bandit -r . -f json -o bandit-report.json || true
         echo "Security scan completed"
+        
+        # DEBUG: List files to verify they were created
+        echo "=== Files created by Bandit ==="
+        ls -la bandit-* || echo "No bandit files found"
+        
         # Show summary in logs
         echo "=== Bandit Security Scan Summary ==="
-        head -20 bandit-report.txt || echo "No issues found"
-    
+        if [ -f bandit-report.txt ]; then
+          head -20 bandit-report.txt
+        else
+          echo "No bandit-report.txt found - Bandit may have failed"
+        fi 
     - name: Upload Bandit security report
       uses: actions/upload-artifact@v4
       with:
