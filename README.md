@@ -55,19 +55,19 @@ Push → GitHub Actions → Bandit → Pylint → SonarCloud → Deploy to EC2
 ## Project Structure
 
 dublin-marketplace/
-├── app.py # Main Flask application
-├── models.py # Database models
-├── forms.py # Form validation
-├── requirements.txt # Python dependencies
-├── templates/ # HTML templates
-│ ├── base.html
-│ ├── index.html
-│ ├── add_listing.html
-│ ├── listing_detail.html
-│ └── edit_listing.html
+├── app.py                 # Main Flask application
+├── models.py              # Database models
+├── forms.py               # Form validation
+├── requirements.txt       # Python dependencies
+├── templates/             # HTML templates
+│   ├── base.html
+│   ├── index.html
+│   ├── add_listing.html
+│   ├── listing_detail.html
+│   └── edit_listing.html
 └── .github/
-└── workflows/
-└── ci-cd.yml # GitHub Actions pipeline
+    └── workflows/
+        └── ci-cd.yml      # GitHub Actions pipeline
 
 ---
 
